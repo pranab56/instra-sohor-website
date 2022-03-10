@@ -52,18 +52,20 @@ const switchTab = (id) => {
 };
 
 const createPost = (post) => {
+  // problem 2 solved
+    const userImage = post.userImage;
     const image = post.image;
     const div = document.createElement( "article" );
     div.classList.add( "post" );
     div.innerHTML = `
               <div class="post__header">
                 <div class="post__profile">
-                  <a
+                  <a 
                     href="https://github.com/ProgrammingHero1"
                     target="_blank"
                     class="post__avatar"
                   >
-                    <img src="${image}" alt="User Picture" />
+                    <img src="${userImage}" alt="User Picture" />
                   </a>
                   <a href="#" class="post__user">phero</a>
                 </div>
