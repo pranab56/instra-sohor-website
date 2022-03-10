@@ -16,7 +16,8 @@ const isLiked = (id) => {
 };
 
 const addToLiked = (id) => {
-    likedPostsId.plus(id); 
+  // likedPostId is not a funtion problem solved!!
+    likedPostsId.push(id); 
     showPosts(posts);
 };
 
@@ -84,6 +85,7 @@ const createPost = (post) => {
 
               <div class="post__footer">
                 <div class="post__buttons">
+                
                   <button class="post__button" onclick="addToLiked(${post.id})">
                   <i class="fa-solid fa-heart ${isLiked(post.id) && "text-danger"}"></i>
                     
