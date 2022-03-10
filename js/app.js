@@ -53,7 +53,6 @@ const switchTab = (id) => {
 };
 
 const createPost = (post) => {
-  console.log(post);
   // problem 2 solved
     const userImage = post.userImage;
     const image = post.image;
@@ -149,6 +148,8 @@ const showPosts = (posts) => {
 };
 
 const displayLikedPosts = () => {
+  // likepost repeatation bugs problem fix!
+  document.getElementById( "liked" ).innerHTML='';
     const likedPosts = getLikedPosts();
     likedPosts.forEach((post) => {
         const div = createPost(post);
@@ -156,8 +157,10 @@ const displayLikedPosts = () => {
     });
 };
 
+
 const displayReportedPosts = () => {
   // reportedPosts bugs problem fix!
+  document.getElementById( "reported" ).innerHTML='';
     const reportedPosts = getReportedPosts();
     reportedPosts.forEach((post) => {
         const div = createPost(post);
