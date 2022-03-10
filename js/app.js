@@ -157,8 +157,9 @@ const displayLikedPosts = () => {
 };
 
 const displayReportedPosts = () => {
+  // reportedPosts bugs problem fix!
     const reportedPosts = getReportedPosts();
-    posts.forEach((post) => {
+    reportedPosts.forEach((post) => {
         const div = createPost(post);
         document.getElementById( "reported" ).appendChild(div);
     });
