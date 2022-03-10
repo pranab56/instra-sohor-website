@@ -31,7 +31,6 @@ const displayContent = (text) => {
   // description bugs problem solved!
     return text.length < 30 ? text : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
-
 const switchTab = (id) => {
     if (id === "posts") {
         document.getElementById( "posts" ).style.display = "grid";
@@ -47,11 +46,9 @@ const switchTab = (id) => {
         document.getElementById( "reported" ).style.display = "block";
         document.getElementById( "posts" ).style.display = "none";
         document.getElementById( "liked" ).style.display = "none";
-
         displayReportedPosts();
     }
 };
-
 const createPost = (post) => {
   // problem 2 solved
     const userImage = post.userImage;
@@ -155,7 +152,9 @@ const displayLikedPosts = () => {
         const div = createPost(post);
         document.getElementById( "liked" ).appendChild(div);
     });
+    document.getElementById('question').style.display='none';
 };
+
 
 
 const displayReportedPosts = () => {
@@ -166,7 +165,9 @@ const displayReportedPosts = () => {
         const div = createPost(post);
         document.getElementById( "reported" ).appendChild(div);
     });
+    document.getElementById('question').style.display='none';
 };
+
 
 const loadPosts = async () =>{
   let data = await fetch('../data/posts.json');
