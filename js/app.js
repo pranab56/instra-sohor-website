@@ -28,7 +28,8 @@ const reportPost = (id) => {
 };
 
 const displayContent = (text) => {
-    return text.length < 30 ? 'text' : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
+  // description bugs problem solved!
+    return text.length < 30 ? text : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
 
 const switchTab = (id) => {
@@ -52,6 +53,7 @@ const switchTab = (id) => {
 };
 
 const createPost = (post) => {
+  console.log(post);
   // problem 2 solved
     const userImage = post.userImage;
     const image = post.image;
